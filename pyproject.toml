@@ -33,7 +33,3 @@ Source = "https://github.com/franklalalala/CombineMols3D"
 # AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
 requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5"]
 build-backend = "setuptools.build_meta"
-
-[pypi]
-  username = franklalalala
-  password = pypi-AgEIcHlwaS5vcmcCJGM4NTRkZWNmLTAyZTEtNDljNi05YmI5LWE3MWVmNTFmYjYxZQACKlszLCJjZWY0NTFiNy04ZTAyLTRkZTUtOGFmNi03ODQzYjk4YTk2YWEiXQAABiCvA6Sw6Nddjra5UwUZPDR3-SJ_ARmzd7IAWLPd7HCIRw
