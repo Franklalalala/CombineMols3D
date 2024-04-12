@@ -60,7 +60,7 @@ Other parameters are same for the two functions:
    
     
     
-  * `cutoff_mult`: there are several places to detect neighbors for a specific atom. By default, it is `natural cutoff` as follow equation 2. 
+  * `cutoff_mult`: there are several places to detect neighbors for a specific atom. By default, it is `natural cutoff` as follow equation: 
     
     
     
@@ -68,7 +68,7 @@ Other parameters are same for the two functions:
  
     
     
-    We can enlarge our search scope to multiply the  `natural cutoff` as follow equation 3.
+    We can enlarge our search scope to multiply the  `natural cutoff` as follow equation:
     
     $DetectRange(\mathrm{AB})=cutoff mult*(r(\mathrm{A})+r(\mathrm{B})+0.3)$
     
