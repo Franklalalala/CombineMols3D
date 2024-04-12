@@ -55,23 +55,23 @@ Other parameters are same for the two functions:
   * `skin`: to get a proper bond length for the new bond. Here we adopt the [covalent radii method](https://en.wikipedia.org/wiki/Covalent_radius). A skin parameter is added to finetune the bond length, though it is 0 by default.
     
     
-    $$
-    R(\mathrm{AB})=r(\mathrm{A})+r(\mathrm{B})+skin
-    $$
+    
+    $R(\mathrm{AB})=r(\mathrm{A})+r(\mathrm{B})+skin$
+   
     
     
   * `cutoff_mult`: there are several places to detect neighbors for a specific atom. By default, it is `natural cutoff` as follow equation 2. 
     
     
-    $$
-    DetectRange(\mathrm{AB})=r(\mathrm{A})+r(\mathrm{B})+0.3
-    $$
+    
+    $DetectRange(\mathrm{AB})=r(\mathrm{A})+r(\mathrm{B})+0.3$
+ 
     
     
     We can enlarge our search scope to multiply the  `natural cutoff` as follow equation 3.
-    $$
-    DetectRange(\mathrm{AB})=cutoff mult*(r(\mathrm{A})+r(\mathrm{B})+0.3)
-    $$
+    
+    $DetectRange(\mathrm{AB})=cutoff mult*(r(\mathrm{A})+r(\mathrm{B})+0.3)$
+    
 
 * Performance related:
   * `sample_times`: how many times to sample addon positions in translation and angles in rotation.
