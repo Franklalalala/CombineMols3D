@@ -29,24 +29,25 @@ pip install combinemols3d
 3. Combine them by eliminate the dummy sites.
 
 ```python
-    from ase.visualize import view
-    from ase.build.molecule import molecule
+from ase.visualize import view
+from ase.build.molecule import molecule
+from combinemols3d.CombineMols3D import combine_2_mols_with_dummy, combine_2_mols
 
-    main_mol = molecule('C7NH5')
-    sub_mol = molecule('BDA')
+main_mol = molecule('C7NH5')
+sub_mol = molecule('BDA')
 
-    view(main_mol)
-    view(sub_mol)
+view(main_mol)
+view(sub_mol)
 
-    final_mol = combine_2_mols_with_dummy(molecule_1=main_mol, molecule_2=sub_mol,
-                                          dummy_atom_index_1=11, dummy_atom_index_2=6)
-    view(final_mol)
-
+final_mol = combine_2_mols_with_dummy(molecule_1=main_mol.copy(), molecule_2=sub_mol.copy(),
+                                      dummy_atom_index_1=11, dummy_atom_index_2=6)
+view(final_mol)
 ```
 If you don't want to eliminate the dummy sites, use the `combine_2_mols` instead:
 ```python
-    final_mol = combine_2_mols(molecule_1=main_mol, molecule_2=sub_mol,
-                                          tgt_atom_1_index=11, tgt_atom_2_index=6)
+final_mol = combine_2_mols(molecule_1=main_mol, molecule_2=sub_mol,
+                                      tgt_atom_1_index=11, tgt_atom_2_index=6)
+view(final_mol)
 ```
 Other parameters are same for the two functions:
 
@@ -57,7 +58,7 @@ Other parameters are same for the two functions:
     
     
     $R(\mathrm{AB})=r(\mathrm{A})+r(\mathrm{B})+skin$
-   
+  
     
     
   * `cutoff_mult`: there are several places to detect neighbors for a specific atom. By default, it is `natural cutoff` as follow equation: 
@@ -65,7 +66,7 @@ Other parameters are same for the two functions:
     
     
     $DetectRange(\mathrm{AB})=r(\mathrm{A})+r(\mathrm{B})+0.3$
- 
+
     
     
     We can enlarge our search scope to multiply the  `natural cutoff` as follow equation:
