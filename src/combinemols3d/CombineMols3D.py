@@ -131,6 +131,7 @@ def combine_2_mols_with_dummy(molecule_1: Atoms, molecule_2: Atoms, dummy_atom_i
     return combinend_mol
 
 
+
 if __name__ == '__main__':
     from ase.visualize import view
     from ase.build.molecule import molecule
