@@ -1,9 +1,36 @@
+[project]
+name = "CombineMols3D"
+dynamic = ["version"]
+readme = "README.md"
+description = "Combine 2 molecules in 3D by sample."
+authors = [{name = "franklalalala", email = "1660810667@qq.com"}]
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Development Status :: 3 - Alpha"
+]
+requires-python = ">=3.8"
+dependencies = [
+	"importlib-metadata",
+	"ase",
+	"numpy",
+	"scipy",
+]
+
+[tool.setuptools]
+packages = ["CombineMols3D"]
+
+[tool.setuptools.dynamic]
+version = {file = ["version.txt"]}
+
+[project.urls]
+Source = "https://github.com/franklalalala/CombineMols3D"
+
 [build-system]
 # AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
 requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools_scm]
-# For smarter version schemes and other configuration options,
-# check out https://github.com/pypa/setuptools_scm
-version_scheme = "no-guess-dev"
