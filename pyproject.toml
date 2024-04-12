@@ -1,5 +1,5 @@
 [project]
-name = "CombineMols3D"
+name = "combinemols3d"
 dynamic = ["version"]
 readme = "README.md"
 description = "Combine 2 molecules in 3D by sample."
@@ -21,7 +21,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["CombineMols3D"]
+packages = ["combinemols3d"]
 
 [tool.setuptools.dynamic]
 version = {file = ["version.txt"]}

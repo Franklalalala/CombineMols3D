@@ -143,4 +143,5 @@ if __name__ == '__main__':
 
     final_mol = combine_2_mols_with_dummy(molecule_1=main_mol, molecule_2=sub_mol,
                                           dummy_atom_index_1=11, dummy_atom_index_2=6)
+
     view(final_mol)
