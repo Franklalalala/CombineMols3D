@@ -1,9 +1,6 @@
 # CombineMols3D
 Combine 2 molecules in 3D by sample.
 
-
-A detailed description could be found in the article: Exploring exohedral functionalization of fullerene with Automation and Neural Network Potential. 
-
 ![overview](.//overview.png)
 
 <center>Overview of the combination process.</center>
