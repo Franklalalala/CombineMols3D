@@ -95,14 +95,22 @@ def combine_2_mols(molecule_1: Atoms, molecule_2: Atoms, tgt_atom_1_index: int, 
                                                                cutoff_mult=cutoff_mult)
     translation_vec = addon_position - addon_atom.position
     sub_mol.translate(translation_vec)
+    if len(sub_mol) == 1:
+        main_mol.append(sub_mol[0])
+        return main_mol
+
     # rotate along with the nearest neighbors to minimize the fragments repulsion
     main_mol_positions = main_mol.get_positions()
     min_rev_distance = 100000000
     sub_mol_nb_indexes = get_nearest_neighbor(a_molecule=sub_mol, atom_index=tgt_atom_addon_index, cutoff_mult=cutoff_mult)
     for i in range(sample_times):
         sub_mol_copy = sub_mol.copy()
-        for a_neighbor_index in sub_mol_nb_indexes[:rotation_times]:
+        for idx, a_neighbor_index in enumerate(sub_mol_nb_indexes[:rotation_times]):
             rotate_angle = np.random.uniform(0, 360)
+            if idx == 0:
+                rotate_vec = np.random.rand(3)
+                sub_mol_copy.rotate(a=rotate_angle, v=rotate_vec, center=addon_position)
+
             rotate_vec = addon_position - sub_mol_copy[a_neighbor_index].position
             sub_mol_copy.rotate(a=rotate_angle, v=rotate_vec, center=addon_position)
             sub_mol_copy_positions = sub_mol_copy.get_positions()
