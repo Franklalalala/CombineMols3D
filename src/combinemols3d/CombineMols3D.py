@@ -1,3 +1,5 @@
+# This code was created by Liu Mingkang <1660810667@qq.com>
+
 import ase
 import numpy as np
 from ase import Atoms, Atom

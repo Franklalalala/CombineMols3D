@@ -81,4 +81,6 @@ Other parameters are same for the two functions:
 
 ## Note
 
+Author: Liu Mingkang
+
 Contact me: 1660810667@qq.com
